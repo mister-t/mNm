@@ -60,21 +60,21 @@
             </objects>
             <point key="canvasLocation" x="-727.5" y="290.5"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Mentee Home View Controller-->
         <scene sceneID="4ed-0r-s8B">
             <objects>
-                <viewController id="DcJ-ep-Nic" customClass="HomeViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DcJ-ep-Nic" customClass="MenteeHomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dy7-EA-dxg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gxR-jE-NDO">
-                                <rect key="frame" x="114" y="156" width="128" height="30"/>
+                                <rect key="frame" x="107" y="156" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="List of my mentors"/>
+                                <state key="normal" title="List of my MENTORS"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Npo-Cd-sGf">
-                                <rect key="frame" x="20" y="232" width="340" height="30"/>
+                                <rect key="frame" x="17" y="400" width="340" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="If empty, show &quot;You do not have any mentors yet&quot;"/>
                             </button>
@@ -84,10 +84,24 @@
                                 <state key="normal" title="My name &amp; picture on the top"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TDh-rT-ILL">
-                                <rect key="frame" x="143" y="603" width="94" height="30"/>
+                                <rect key="frame" x="136" y="603" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Mentor +"/>
+                                <state key="normal" title="Add MENTOR +"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tapping on a task would take to the " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cSZ-0h-quT">
+                                <rect key="frame" x="56" y="179" width="278" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="task list assigned by the mentor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FlA-zx-aUd">
+                                <rect key="frame" x="56" y="226" width="278" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -96,12 +110,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT9-dh-etO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579.5" y="1090.5"/>
+            <point key="canvasLocation" x="187.5" y="1090.5"/>
         </scene>
-        <!--Video View Controller-->
+        <!--Mentor Home View Controller-->
+        <scene sceneID="ch1-TV-i9g">
+            <objects>
+                <viewController id="Jfc-My-xI8" customClass="MentorHomeViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="anI-HS-R9j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EVl-gV-HVy">
+                                <rect key="frame" x="105" y="206" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="List of my MENTEES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eGe-S4-kvX">
+                                <rect key="frame" x="74" y="46" width="203" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My name &amp; picture on the top"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U9Z-RP-Cgj">
+                                <rect key="frame" x="25" y="386" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="If empty, show &quot;You do not have any MENTEE yet&quot;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p95-Hs-bXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187.5" y="1824.5"/>
+        </scene>
+        <!--Mentor Task List View Controller-->
+        <scene sceneID="swr-1I-wOu">
+            <objects>
+                <viewController id="mlK-Re-6hY" customClass="MentorTaskListViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKT-Bi-Qcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qqg-Bq-N9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.5" y="1824.5"/>
+        </scene>
+        <!--Mentor Video View Controller-->
+        <scene sceneID="1vL-hY-sg5">
+            <objects>
+                <viewController id="rQb-56-0ow" customClass="MentorVideoViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jyu-EH-RlT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUw-cB-Edk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116.5" y="1824.5"/>
+        </scene>
+        <!--Mentor Audio View Controller-->
+        <scene sceneID="9hd-3b-WFo">
+            <objects>
+                <viewController id="aF0-1r-aoJ" customClass="MentorAudioViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2T7-uG-O4v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmU-vN-n7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530.5" y="1824.5"/>
+        </scene>
+        <!--Mentee Video View Controller-->
         <scene sceneID="Z6g-0o-slQ">
             <objects>
-                <viewController id="CWV-LN-nGE" customClass="VideoViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CWV-LN-nGE" customClass="MenteeVideoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8la-ag-khb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,12 +230,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7W-u8-f5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988.5" y="1090.5"/>
+            <point key="canvasLocation" x="1116.5" y="1090.5"/>
         </scene>
-        <!--Audio View Controller-->
+        <!--Mentee Audio View Controller-->
         <scene sceneID="Hmc-1v-BIR">
             <objects>
-                <viewController id="azF-hd-y1X" customClass="AudioViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="azF-hd-y1X" customClass="MenteeAudioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mx1-yp-uAj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Zy-Jc-e6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402.5" y="1090.5"/>
+            <point key="canvasLocation" x="1530.5" y="1090.5"/>
         </scene>
         <!--Search Mentor View Controller-->
         <scene sceneID="Ag5-MY-o34">
@@ -198,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="-727.5" y="1084.5"/>
         </scene>
-        <!--Task List View Controller-->
+        <!--Mentee Task List View Controller-->
         <scene sceneID="h6C-Yj-PS1">
             <objects>
-                <viewController id="2qr-v6-TLw" customClass="TaskListViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2qr-v6-TLw" customClass="MenteeTaskListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b8V-In-pSl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="277-Cn-bsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="171.5" y="1090.5"/>
+            <point key="canvasLocation" x="701.5" y="1090.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CPa-HV-ZaB">
@@ -250,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myc-0t-gbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="12"/>
+            <point key="canvasLocation" x="2503" y="-92"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HDD-al-kMM">
@@ -290,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rr8-Il-3c9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="12"/>
+            <point key="canvasLocation" x="2133" y="-92"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Vhj-9Y-5by">
@@ -312,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHu-Ry-NT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1689" y="12"/>
+            <point key="canvasLocation" x="2893" y="-92"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Yfj-h4-Uby">
@@ -334,7 +429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24D-Eu-jj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2053" y="12"/>
+            <point key="canvasLocation" x="3257" y="-92"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NpT-8p-MPB">
@@ -374,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IE-fW-zmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="12"/>
+            <point key="canvasLocation" x="1747" y="-92"/>
         </scene>
         <!--Mentor Profile View Controller-->
         <scene sceneID="z1u-0G-zV6">
