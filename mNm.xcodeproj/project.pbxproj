@@ -19,6 +19,8 @@
 		D6B51E371D20A04A00681D5A /* MentorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E361D20A04A00681D5A /* MentorProfileViewController.swift */; };
 		D6B51E391D20AAE200681D5A /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E381D20AAE200681D5A /* TaskListViewController.swift */; };
 		D6B51E3B1D20ACDC00681D5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E3A1D20ACDC00681D5A /* HomeViewController.swift */; };
+		D6B51E3D1D20AF9100681D5A /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E3C1D20AF9100681D5A /* VideoViewController.swift */; };
+		D6B51E3F1D20B08800681D5A /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E3E1D20B08800681D5A /* AudioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		D6B51E361D20A04A00681D5A /* MentorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorProfileViewController.swift; sourceTree = "<group>"; };
 		D6B51E381D20AAE200681D5A /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		D6B51E3A1D20ACDC00681D5A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D6B51E3C1D20AF9100681D5A /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		D6B51E3E1D20B08800681D5A /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 				D6B51E361D20A04A00681D5A /* MentorProfileViewController.swift */,
 				D6B51E381D20AAE200681D5A /* TaskListViewController.swift */,
 				D6B51E3A1D20ACDC00681D5A /* HomeViewController.swift */,
+				D6B51E3C1D20AF9100681D5A /* VideoViewController.swift */,
+				D6B51E3E1D20B08800681D5A /* AudioViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -281,8 +287,10 @@
 			files = (
 				D68194881D1CB0CD0074F49A /* WelcomeViewController.swift in Sources */,
 				D68194861D1CB0CD0074F49A /* AppDelegate.swift in Sources */,
+				D6B51E3D1D20AF9100681D5A /* VideoViewController.swift in Sources */,
 				D6B51E351D209E8C00681D5A /* SearchMentorViewController.swift in Sources */,
 				D6B51E331D209E1B00681D5A /* EditProfileViewController.swift in Sources */,
+				D6B51E3F1D20B08800681D5A /* AudioViewController.swift in Sources */,
 				D6B51E371D20A04A00681D5A /* MentorProfileViewController.swift in Sources */,
 				D6B51E3B1D20ACDC00681D5A /* HomeViewController.swift in Sources */,
 				D6B51E391D20AAE200681D5A /* TaskListViewController.swift in Sources */,
