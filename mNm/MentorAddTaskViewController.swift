@@ -1,14 +1,14 @@
 //
-//  MentorHomeViewController.swift
+//  MentorAddTaskViewController.swift
 //  mNm
 //
-//  Created by Tony Yeung on 6/26/16.
+//  Created by Tony Yeung on 6/28/16.
 //  Copyright © 2016 Tony Yeung. All rights reserved.
 //
 
 import UIKit
 
-class MentorHomeViewController: UIViewController {
+class MentorAddTaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,6 @@ class MentorHomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        navigationController!.popViewControllerAnimated(true)
     }
     
 

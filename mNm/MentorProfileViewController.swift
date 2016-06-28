@@ -21,7 +21,15 @@ class MentorProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var onSendRequest: UIButton!
 
+    @IBAction func onSendRequest(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Request Sent", message:
+            "Mentor 1 will be notified", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

@@ -14,6 +14,7 @@
 		D68194901D1CB0CD0074F49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D681948E1D1CB0CD0074F49A /* LaunchScreen.storyboard */; };
 		D681949B1D1CB0CD0074F49A /* mNmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681949A1D1CB0CD0074F49A /* mNmTests.swift */; };
 		D68194A61D1CB0CD0074F49A /* mNmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68194A51D1CB0CD0074F49A /* mNmUITests.swift */; };
+		D6A0E3B11D22B12C00AE5B2F /* MentorAddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0E3B01D22B12C00AE5B2F /* MentorAddTaskViewController.swift */; };
 		D6B51E331D209E1B00681D5A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E321D209E1B00681D5A /* EditProfileViewController.swift */; };
 		D6B51E351D209E8C00681D5A /* SearchMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E341D209E8C00681D5A /* SearchMentorViewController.swift */; };
 		D6B51E371D20A04A00681D5A /* MentorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B51E361D20A04A00681D5A /* MentorProfileViewController.swift */; };
@@ -58,6 +59,7 @@
 		D68194A11D1CB0CD0074F49A /* mNmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mNmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68194A51D1CB0CD0074F49A /* mNmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mNmUITests.swift; sourceTree = "<group>"; };
 		D68194A71D1CB0CD0074F49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A0E3B01D22B12C00AE5B2F /* MentorAddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorAddTaskViewController.swift; sourceTree = "<group>"; };
 		D6B51E321D209E1B00681D5A /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		D6B51E341D209E8C00681D5A /* SearchMentorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMentorViewController.swift; sourceTree = "<group>"; };
 		D6B51E361D20A04A00681D5A /* MentorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorProfileViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				D6B51E421D20B72800681D5A /* MentorTaskListViewController.swift */,
 				D6B51E441D20B74A00681D5A /* MentorVideoViewController.swift */,
 				D6B51E461D20B76F00681D5A /* MentorAudioViewController.swift */,
+				D6A0E3B01D22B12C00AE5B2F /* MentorAddTaskViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				D6B51E431D20B72800681D5A /* MentorTaskListViewController.swift in Sources */,
 				D68194861D1CB0CD0074F49A /* AppDelegate.swift in Sources */,
 				D6B51E3D1D20AF9100681D5A /* MenteeVideoViewController.swift in Sources */,
+				D6A0E3B11D22B12C00AE5B2F /* MentorAddTaskViewController.swift in Sources */,
 				D6B51E351D209E8C00681D5A /* SearchMentorViewController.swift in Sources */,
 				D6B51E451D20B74A00681D5A /* MentorVideoViewController.swift in Sources */,
 				D6B51E411D20B1D200681D5A /* MentorHomeViewController.swift in Sources */,
