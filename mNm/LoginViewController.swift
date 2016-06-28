@@ -1,19 +1,32 @@
 //
-//  HomeViewController.swift
+//  LoginViewController.swift
 //  mNm
 //
-//  Created by Tony Yeung on 6/26/16.
+//  Created by Tony Yeung on 6/28/16.
 //  Copyright © 2016 Tony Yeung. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class LoginViewController: UIViewController {
+    var initialY: CGFloat!
+    var offset: CGFloat!
+    
+    @IBOutlet weak var loginBtn: UIImageView!
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {

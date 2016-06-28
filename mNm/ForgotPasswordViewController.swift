@@ -1,14 +1,14 @@
 //
-//  MentorTaskListViewController.swift
+//  ForgotPasswordViewController.swift
 //  mNm
 //
-//  Created by Tony Yeung on 6/26/16.
+//  Created by Tony Yeung on 6/28/16.
 //  Copyright © 2016 Tony Yeung. All rights reserved.
 //
 
 import UIKit
 
-class MentorTaskListViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class MentorTaskListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onBackBtnTapped(sender: AnyObject) {
+    @IBAction func onBackBtnTappled(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {});
     }
 

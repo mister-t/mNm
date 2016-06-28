@@ -21,7 +21,11 @@ class SearchMentorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var onBackBtnTapped: UIButton!
 
+    @IBAction func onBackBtnTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {});
+    }
     /*
     // MARK: - Navigation
 

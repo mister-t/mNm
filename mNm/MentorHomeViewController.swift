@@ -22,6 +22,10 @@ class MentorHomeViewController: UIViewController {
         navigationController!.popViewControllerAnimated(true)
     }
     
+    @IBAction func onBackBtnTapped(sender: AnyObject) {
+//        self.dismissViewControllerAnimated(true, completion: {});
+        self.navigationController?.popViewControllerAnimated(true);
+    }
 
     /*
     // MARK: - Navigation

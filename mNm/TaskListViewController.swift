@@ -1,5 +1,5 @@
 //
-//  MentorTaskListViewController.swift
+//  TaskListViewController.swift
 //  mNm
 //
 //  Created by Tony Yeung on 6/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MentorTaskListViewController: UIViewController {
+class TaskListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  TaskListViewController.swift
+//  HomeViewController.swift
 //  mNm
 //
 //  Created by Tony Yeung on 6/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskListViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,10 @@ class TaskListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    @IBAction func onBackBtnTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {});
+    }
 
     /*
     // MARK: - Navigation
