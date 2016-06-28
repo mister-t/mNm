@@ -22,6 +22,9 @@ class EditProfileViewController: UIViewController {
     }
     
 
+    @IBAction func onEditTapped(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true);
+    }
     /*
     // MARK: - Navigation
 
