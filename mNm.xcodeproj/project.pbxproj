@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6068ECC1D25A996006594D0 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6068ECB1D25A996006594D0 /* SearchResultCell.swift */; };
 		D68194861D1CB0CD0074F49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68194851D1CB0CD0074F49A /* AppDelegate.swift */; };
 		D68194881D1CB0CD0074F49A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68194871D1CB0CD0074F49A /* WelcomeViewController.swift */; };
 		D681948B1D1CB0CD0074F49A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68194891D1CB0CD0074F49A /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6068ECB1D25A996006594D0 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		D68194821D1CB0CD0074F49A /* mNm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mNm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68194851D1CB0CD0074F49A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D68194871D1CB0CD0074F49A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				D6A0E3B01D22B12C00AE5B2F /* MentorAddTaskViewController.swift */,
 				D6A0E3B21D22FFC800AE5B2F /* LoginViewController.swift */,
 				D6A0E3B41D23310C00AE5B2F /* ForgotPasswordViewController.swift */,
+				D6068ECB1D25A996006594D0 /* SearchResultCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				D68194861D1CB0CD0074F49A /* AppDelegate.swift in Sources */,
 				D6A0E3B31D22FFC800AE5B2F /* LoginViewController.swift in Sources */,
 				D6B51E3D1D20AF9100681D5A /* MenteeVideoViewController.swift in Sources */,
+				D6068ECC1D25A996006594D0 /* SearchResultCell.swift in Sources */,
 				D6A0E3B11D22B12C00AE5B2F /* MentorAddTaskViewController.swift in Sources */,
 				D6B51E351D209E8C00681D5A /* SearchMentorViewController.swift in Sources */,
 				D6B51E451D20B74A00681D5A /* MentorVideoViewController.swift in Sources */,

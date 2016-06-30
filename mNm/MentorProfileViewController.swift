@@ -10,10 +10,14 @@ import UIKit
 
 class MentorProfileViewController: UIViewController {
 
+    @IBOutlet weak var mentorLabel: UILabel!
+    
+    var index: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    mentorLabel.text = ("You tapped the cell at index \(index)")
     }
 
     override func didReceiveMemoryWarning() {
