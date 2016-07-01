@@ -56,9 +56,8 @@ class SearchMentorViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = searchResultsTableView.dequeueReusableCellWithIdentifier("SearchResultCell", forIndexPath: indexPath) as! SearchResultCell
-//        cell.textLabel!.text = "This is row \(indexPath.row)"
         if let mentors = mentors {
-            cell.textLabel!.text = mentors[indexPath.row]["name"] as! String
+            cell.textLabel!.text = mentors[indexPath.row]["name"] as? String
         } else {
             cell.textLabel!.text = "Unknown"
         }
@@ -82,14 +81,29 @@ class SearchMentorViewController: UIViewController, UITableViewDataSource, UITab
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        let mentorDetail:AnyObject
+        
         // Get the index path from the cell that was tapped
         let indexPath = searchResultsTableView.indexPathForSelectedRow
         // Get the Row of the Index Path and set as index
         let index = indexPath?.row
+        
         // Get in touch with the DetailViewController
         let detailViewController = segue.destinationViewController as! MentorProfileViewController
         // Pass on the data to the Detail ViewController by setting it's indexPathRow value
-        detailViewController.index = index              }
+        detailViewController.index = index
+        //Determine the movie that is tapped and pass its data to the detail view
+        if let mentors = mentors {
+            mentorDetail = mentors[index!]
+            print( (mentorDetail))
+            detailViewController.name = mentorDetail["name"] as! String
+            detailViewController.expertise = mentorDetail["expertise"] as! String
+            detailViewController.job = mentorDetail["job"] as! String
+            detailViewController.company = mentorDetail["company"] as! String
+        } else {
+            detailViewController.name = "Unknown"
+        }
+    }
 
 
 }
