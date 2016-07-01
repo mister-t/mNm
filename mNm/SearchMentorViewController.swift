@@ -10,22 +10,59 @@ import UIKit
 
 class SearchMentorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    
     @IBOutlet weak var searchResultsTableView: UITableView!
+
+    let url = NSBundle.mainBundle().URLForResource("mentors", withExtension: "json")
+    var data: NSData?
+    var mentors: [NSDictionary]?
+    
+    func readJSONObject(object: [String: AnyObject]) {
+         mentors = object["mentors"] as? [NSDictionary]
+        
+        for mentor in mentors! {
+            guard let name = mentor["name"] as? String else { break }
+            print("Mentor Name: " + name)
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        data = NSData(contentsOfURL: url!)
+        
+        do {
+            let object = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+            if let dictionary = object as? [String: AnyObject] {
+                readJSONObject(dictionary)
+            }
+        } catch {
+            print("error while reading JSON")
+            // Handle Error
+        }
         
         searchResultsTableView.delegate = self
         searchResultsTableView.dataSource = self
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        if let mentors = mentors {
+            return mentors.count
+        } else {
+         return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = searchResultsTableView.dequeueReusableCellWithIdentifier("SearchResultCell", forIndexPath: indexPath) as! SearchResultCell
-        cell.textLabel!.text = "This is row \(indexPath.row)"
-        
+//        cell.textLabel!.text = "This is row \(indexPath.row)"
+        if let mentors = mentors {
+            cell.textLabel!.text = mentors[indexPath.row]["name"] as! String
+        } else {
+            cell.textLabel!.text = "Unknown"
+        }
+
         return cell
     }
     
