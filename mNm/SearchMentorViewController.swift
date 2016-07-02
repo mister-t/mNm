@@ -80,6 +80,9 @@ class SearchMentorViewController: UIViewController, UITableViewDataSource, UITab
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Mentors"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed; http://stackoverflow.com/questions/28471164/how-to-set-back-button-text-in-swift
         
         let mentorDetail:AnyObject
         
