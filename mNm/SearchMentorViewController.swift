@@ -13,7 +13,7 @@ class SearchMentorViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var searchResultsTableView: UITableView!
 
-    let url = NSBundle.mainBundle().URLForResource("mentors", withExtension: "json")
+    let url = NSBundle.mainBundle().URLForResource("mentors", withExtension: "json") //get the JSON in the "Resource" folder
     var data: NSData?
     var mentors: [NSDictionary]?
     
@@ -83,29 +83,13 @@ class SearchMentorViewController: UIViewController, UITableViewDataSource, UITab
         let backItem = UIBarButtonItem()
         backItem.title = "Mentors"
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed; http://stackoverflow.com/questions/28471164/how-to-set-back-button-text-in-swift
+
+        let cell = sender as! UITableViewCell
+        let indexPath = searchResultsTableView.indexPathForCell(cell)
+        let mentor = mentors![indexPath!.row]
         
-        let mentorDetail:AnyObject
-        
-        // Get the index path from the cell that was tapped
-        let indexPath = searchResultsTableView.indexPathForSelectedRow
-        // Get the Row of the Index Path and set as index
-        let index = indexPath?.row
-        
-        // Get in touch with the DetailViewController
         let detailViewController = segue.destinationViewController as! MentorProfileViewController
-        // Pass on the data to the Detail ViewController by setting it's indexPathRow value
-        detailViewController.index = index
-        //Determine the movie that is tapped and pass its data to the detail view
-        if let mentors = mentors {
-            mentorDetail = mentors[index!]
-            print( (mentorDetail))
-            detailViewController.name = mentorDetail["name"] as! String
-            detailViewController.expertise = mentorDetail["expertise"] as! String
-            detailViewController.job = mentorDetail["job"] as! String
-            detailViewController.company = mentorDetail["company"] as! String
-        } else {
-            detailViewController.name = "Unknown"
-        }
+        detailViewController.mentor = mentor
     }
 
 

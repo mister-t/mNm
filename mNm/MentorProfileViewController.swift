@@ -18,21 +18,22 @@ class MentorProfileViewController: UIViewController {
     
     @IBOutlet weak var companyLabel: UILabel!
     
+    var mentor: NSDictionary!
+    
     var index: Int!
-    var name: String!
-    var expertise: String!
-    var job: String!
-    var company: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        mentorLabel.text = ("You tapped the cell at index \(index)")
-//            mentorLabel.text = ("the row index is \(index)")
-        mentorLabel.text = ("Name: \(name)")
-        expertiseLabel.text = ("Name: \(expertise)")
-        jobLabel.text = ("Name: \(job)")
-        companyLabel.text = ("Name: \(company)")
+        let name        = mentor["name"] as! String
+        let expertise   = mentor["expertise"] as! String
+        let job         = mentor["job"] as! String
+        let company     = mentor["company"] as! String
+        
+        mentorLabel.text    = "Mentor: \(name)"
+        expertiseLabel.text = "Expertise: \(expertise)"
+        jobLabel.text       = "Job: \(job)"
+        companyLabel.text   = "Company: \(company)"
         
     }
 
