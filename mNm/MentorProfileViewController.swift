@@ -10,10 +10,31 @@ import UIKit
 
 class MentorProfileViewController: UIViewController {
 
+    @IBOutlet weak var mentorLabel: UILabel!
+    
+    @IBOutlet weak var expertiseLabel: UILabel!
+    
+    @IBOutlet weak var jobLabel: UILabel!
+    
+    @IBOutlet weak var companyLabel: UILabel!
+    
+    var mentor: NSDictionary!
+    
+    var index: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let name        = mentor["name"] as! String
+        let expertise   = mentor["expertise"] as! String
+        let job         = mentor["job"] as! String
+        let company     = mentor["company"] as! String
+        
+        mentorLabel.text    = "Mentor: \(name)"
+        expertiseLabel.text = "Expertise: \(expertise)"
+        jobLabel.text       = "Job: \(job)"
+        companyLabel.text   = "Company: \(company)"
+        
     }
 
     override func didReceiveMemoryWarning() {

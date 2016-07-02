@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Vsp-dF-t9K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4Q1-wu-9F5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,7 +26,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="KFe-D6-h0C" kind="modal" modalTransitionStyle="crossDissolve" id="poY-WA-ctM"/>
+                                    <segue destination="4Q1-wu-9F5" kind="modal" modalTransitionStyle="crossDissolve" id="poY-WA-ctM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eEg-ps-UT1">
@@ -287,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT9-dh-etO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193.5" y="1084.5"/>
+            <point key="canvasLocation" x="725.5" y="1084.5"/>
         </scene>
         <!--Mentor Home View Controller-->
         <scene sceneID="ch1-TV-i9g">
@@ -468,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUw-cB-Edk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.5" y="1406.5"/>
+            <point key="canvasLocation" x="3908.5" y="1406.5"/>
         </scene>
         <!--Mentor Audio View Controller-->
         <scene sceneID="9hd-3b-WFo">
@@ -484,7 +484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmU-vN-n7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3790.5" y="1406.5"/>
+            <point key="canvasLocation" x="4322.5" y="1406.5"/>
         </scene>
         <!--Mentee Video View Controller-->
         <scene sceneID="Z6g-0o-slQ">
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7W-u8-f5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.5" y="672.5"/>
+            <point key="canvasLocation" x="3908.5" y="672.5"/>
         </scene>
         <!--Mentee Audio View Controller-->
         <scene sceneID="Hmc-1v-BIR">
@@ -562,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Zy-Jc-e6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3790.5" y="672.5"/>
+            <point key="canvasLocation" x="4322.5" y="672.5"/>
         </scene>
         <!--Search Mentor View Controller-->
         <scene sceneID="Ag5-MY-o34">
@@ -572,36 +572,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Search Results-round-images" id="I4F-Yi-s5G">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" image="mentor-mentee-on-stairs" id="dHx-bC-cpt">
+                                <rect key="frame" x="37" y="218" width="300" height="198"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dW8-Me-eP9">
-                                <rect key="frame" x="0.0" y="71" width="375" height="109"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Yy-gE-wbb">
+                                <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="Ioj-O2-IMp" kind="modal" modalTransitionStyle="crossDissolve" id="kxh-8Q-HWB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9eS-bS-aUu">
-                                <rect key="frame" x="0.0" y="71" width="145" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchResultCell" id="cVu-Ka-rtK" customClass="SearchResultCell" customModule="mNm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cVu-Ka-rtK" id="GDr-gN-fxZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QTt-iJ-tEr">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="QTt-iJ-tEr" id="hTt-IJ-PCU"/>
+                                            <segue destination="Ioj-O2-IMp" kind="push" id="u7z-nx-9br"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" id="SuU-vR-HFH">
+                                <rect key="frame" x="15" y="80" width="345" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="onBackBtnTapped:" destination="KFe-D6-h0C" eventType="touchUpInside" id="YOs-vb-dMD"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xvI-7J-wTM"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="onBackBtnTapped" destination="9eS-bS-aUu" id="3hP-vv-FKX"/>
+                        <outlet property="searchResultsTableView" destination="0Yy-gE-wbb" id="v7Z-fX-xpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdO-qZ-37t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-727.5" y="1084.5"/>
+            <point key="canvasLocation" x="-211.5" y="1157.5"/>
         </scene>
         <!--Task List View Controller-->
         <scene sceneID="h6C-Yj-PS1">
@@ -644,7 +665,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="277-Cn-bsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="701.5" y="1090.5"/>
+            <point key="canvasLocation" x="1233.5" y="1090.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CPa-HV-ZaB">
@@ -804,10 +825,6 @@
                                 <rect key="frame" x="86" y="569" width="203" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Mentors-Profile-round-image" id="Bog-tf-j2M">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v6B-N4-l9z">
                                 <rect key="frame" x="86" y="575" width="203" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -829,18 +846,53 @@
                                     <action selector="onBackBtnTapped:" destination="Ioj-O2-IMp" eventType="touchUpInside" id="TAm-Um-htF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xs1-PQ-laf">
+                                <rect key="frame" x="15" y="141" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="job" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xGl-ge-k1f">
+                                <rect key="frame" x="16" y="258" width="340" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="company" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m1h-zZ-2Fp">
+                                <rect key="frame" x="16" y="309" width="347" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expertise" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LgY-8B-nSl">
+                                <rect key="frame" x="14" y="202" width="347" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hza-j2-16r">
+                        <barButtonItem key="backBarButtonItem" title="Mentors" id="Wes-U2-KcS"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="companyLabel" destination="m1h-zZ-2Fp" id="V6U-55-9Mc"/>
+                        <outlet property="expertiseLabel" destination="LgY-8B-nSl" id="zJg-wU-nbN"/>
+                        <outlet property="jobLabel" destination="xGl-ge-k1f" id="OY7-Pb-SuC"/>
+                        <outlet property="mentorLabel" destination="Xs1-PQ-laf" id="sc5-Ez-p4Y"/>
                         <outlet property="onSendRequest" destination="v6B-N4-l9z" id="0wr-wQ-FBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9e-JP-uoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244.5" y="1090.5"/>
+            <point key="canvasLocation" x="287.5" y="1090.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lol-Sh-yz4">
@@ -1145,14 +1197,32 @@
             </objects>
             <point key="canvasLocation" x="331.5" y="-624.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rTh-Xd-3j2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Q1-wu-9F5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RQT-4V-Snh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KFe-D6-h0C" kind="relationship" relationship="rootViewController" id="Im7-tS-XdF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4N-Lr-e51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-744" y="1157"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Mentee-Home_Screen- With  Mentors" width="375" height="667"/>
         <image name="Mentee-task-list" width="375" height="667"/>
         <image name="Mentor-Tasks-list" width="375" height="667"/>
         <image name="Mentor-home-screen" width="375" height="667"/>
-        <image name="Mentors-Profile-round-image" width="375" height="667"/>
-        <image name="Search Results-round-images" width="375" height="667"/>
+        <image name="Mentor-task-add-task" width="375" height="667"/>
+        <image name="Welcome Screen_no_top_bar" width="375" height="667"/>
         <image name="mentor-mentee-on-stairs" width="300" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
