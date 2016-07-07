@@ -11,8 +11,12 @@ import UIKit
 class MentorAddTaskViewController: UIViewController {
     
     //let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey].CGRectValue()
+    @IBOutlet weak var titleText: UITextField!
+    @IBOutlet weak var descriptionText: UITextField!
     @IBOutlet weak var tasksView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var addTaskButton: UIButton!
     var initialY: CGFloat!
     var initialYBtn: CGFloat!
@@ -23,13 +27,13 @@ class MentorAddTaskViewController: UIViewController {
     
     func keyboardWillShow(notification: NSNotification!) {
         tasksView.frame.origin.y = initialY + offset
-        addTaskButton.frame.origin.y = initialYBtn + offsetBtn
+        buttonView.frame.origin.y = initialYBtn + offsetBtn
         
     }
     
     func keyboardWillHide(notification: NSNotification!) {
        tasksView.frame.origin.y = initialY
-        addTaskButton.frame.origin.y = initialYBtn
+        buttonView.frame.origin.y = initialYBtn
 
         
     }
@@ -38,7 +42,7 @@ class MentorAddTaskViewController: UIViewController {
         super.viewDidLoad()
 
         initialY = tasksView.frame.origin.y
-        initialYBtn = addTaskButton.frame.origin.y
+        initialYBtn = buttonView.frame.origin.y
 
         offset = -50
         offsetBtn = -250
@@ -61,14 +65,45 @@ class MentorAddTaskViewController: UIViewController {
 
     }
     
-    /*
-    // MARK: - Navigation
+    
+    
+    @IBAction func onButtonClick(sender: AnyObject) {
+        self.activityIndicator.startAnimating()
+        addTaskButton.selected = true
+        
+        let alertController = UIAlertController(title: "Success", message: "A new task has been Added", preferredStyle: .Alert)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//        let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+//            // handle cancel response here. Doing nothing will dismiss the view.
+//        }
+//        // add the cancel action to the alertController
+//        alertController.addAction(cancelAction)
+//        
+//        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            // handle response here.
+        }
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+        presentViewController(alertController, animated: true) {
+            // optional code for what happens after the alert controller has finished presenting
+        }
     }
-    */
-
+ 
+    @IBAction func editingChanged(sender: AnyObject) {
+        if titleText.text!.isEmpty || descriptionText.text!.isEmpty {
+            // set the button state to disabled
+            addTaskButton.enabled = false
+            // otherwise
+        } else {
+            // set the button state to enabled
+            addTaskButton.enabled = true
+        }
+    }
+        
+        
+        
 }
+    
+
+
