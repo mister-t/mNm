@@ -55,15 +55,14 @@ class LoginViewController: UIViewController {
         activityIndicator.startAnimating()
         loginButton.selected = true
         if emailField.text == "abc@walmart.com" && passwordField.text == "abc123" {
-            
             delay(2, closure: { () -> () in
                 // Stop animating the activity indicator.
                 self.activityIndicator.stopAnimating()
                 // Set the button state back to default, "Not Selected".
                 self.loginButton.selected = false
                 // perform the Segue to the next screen.
-                self.performSegueWithIdentifier("yourSegue", sender: nil)
-            })
+                self.performSegueWithIdentifier("firstSegue", sender: nil)
+           })
         } else {
             // Delay for 2 second
             delay(2, closure: { () -> () in
@@ -93,6 +92,15 @@ class LoginViewController: UIViewController {
             
         }
     }
-    
+    @IBAction func editingChanged(sender: AnyObject) {
+        if emailField.text!.isEmpty || passwordField.text!.isEmpty {
+            // set the button state to disabled
+            loginButton.enabled = false
+            // otherwise
+        } else {
+            // set the button state to enabled
+            loginButton.enabled = true
+        }
+    }
 
 }
