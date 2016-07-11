@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FD25DE71D33333900607563 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD25DE61D33333900607563 /* CameraViewController.swift */; };
+		4FD25DEF1D334AF000607563 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD25DEE1D334AF000607563 /* RecordingViewController.swift */; };
 		D6068ECC1D25A996006594D0 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6068ECB1D25A996006594D0 /* SearchResultCell.swift */; };
 		D648CE0E1D25FD3000C0A20D /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = D648CE0D1D25FD3000C0A20D /* mentors.json */; };
 		D68194861D1CB0CD0074F49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68194851D1CB0CD0074F49A /* AppDelegate.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FD25DE61D33333900607563 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ../CameraViewController.swift; sourceTree = "<group>"; };
+		4FD25DEE1D334AF000607563 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = ../RecordingViewController.swift; sourceTree = "<group>"; };
 		D6068ECB1D25A996006594D0 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		D648CE0D1D25FD3000C0A20D /* mentors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
 		D68194821D1CB0CD0074F49A /* mNm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mNm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,8 @@
 				D6B51E341D209E8C00681D5A /* SearchMentorViewController.swift */,
 				D6B51E361D20A04A00681D5A /* MentorProfileViewController.swift */,
 				D6B51E381D20AAE200681D5A /* TaskListViewController.swift */,
+				4FD25DE61D33333900607563 /* CameraViewController.swift */,
+				4FD25DEE1D334AF000607563 /* RecordingViewController.swift */,
 				D6B51E3A1D20ACDC00681D5A /* HomeViewController.swift */,
 				D6B51E3C1D20AF9100681D5A /* MenteeVideoViewController.swift */,
 				D6B51E3E1D20B08800681D5A /* MenteeAudioViewController.swift */,
@@ -328,6 +334,7 @@
 				D68194861D1CB0CD0074F49A /* AppDelegate.swift in Sources */,
 				D6A0E3B31D22FFC800AE5B2F /* LoginViewController.swift in Sources */,
 				D6B51E3D1D20AF9100681D5A /* MenteeVideoViewController.swift in Sources */,
+				4FD25DEF1D334AF000607563 /* RecordingViewController.swift in Sources */,
 				D6068ECC1D25A996006594D0 /* SearchResultCell.swift in Sources */,
 				D6A0E3B11D22B12C00AE5B2F /* MentorAddTaskViewController.swift in Sources */,
 				D6B51E351D209E8C00681D5A /* SearchMentorViewController.swift in Sources */,
@@ -339,6 +346,7 @@
 				D6B51E471D20B76F00681D5A /* MentorAudioViewController.swift in Sources */,
 				D6B51E3B1D20ACDC00681D5A /* HomeViewController.swift in Sources */,
 				D6B51E391D20AAE200681D5A /* TaskListViewController.swift in Sources */,
+				4FD25DE71D33333900607563 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

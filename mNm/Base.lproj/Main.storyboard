@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="LVA-JC-kpS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="MxZ-48-LUs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -994,7 +994,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUm-tF-E1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1426" y="137"/>
+            <point key="canvasLocation" x="-1554" y="325"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ioa-Eo-WNi">
@@ -1078,10 +1078,10 @@
             </objects>
             <point key="canvasLocation" x="-652" y="-592"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="VrK-GA-KKQ">
             <objects>
-                <viewController id="AZi-CA-Rxq" sceneMemberID="viewController">
+                <viewController id="AZi-CA-Rxq" customClass="CameraViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PPz-PL-VPb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1090,31 +1090,11 @@
                                 <rect key="frame" x="37" y="240" width="300" height="198"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Login" textAlignment="natural" id="7Fb-ox-ngM">
-                                <rect key="frame" x="144" y="27" width="86" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.43137254899999999" green="0.4431372549" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="v3H-v8-5DR">
-                                <rect key="frame" x="52" y="138" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="If9-YL-QOh">
-                                <rect key="frame" x="52" y="183" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R9K-f3-96I">
-                                <rect key="frame" x="88" y="586" width="200" height="30"/>
+                                <rect key="frame" x="0.0" y="580" width="225" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.70196078429999997" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Click to Capture">
                                     <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1122,21 +1102,32 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTakePhoto:" destination="AZi-CA-Rxq" eventType="touchUpInside" id="Yzy-gK-qMK"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vff-d9-xQO">
-                                <rect key="frame" x="52" y="221" width="115" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QLe-tI-vYW">
+                                <rect key="frame" x="225" y="580" width="150" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Forgot Password"/>
-                            </button>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="oKA-3y-syR">
+                                <rect key="frame" x="0.0" y="63" width="375" height="486"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="677"/>
+                    <connections>
+                        <outlet property="captureImageView" destination="QLe-tI-vYW" id="EQH-aJ-9AW"/>
+                        <outlet property="previewView" destination="oKA-3y-syR" id="y8O-Vo-36L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxR-nN-He2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2045.5" y="-266.5"/>
+            <point key="canvasLocation" x="1745.5" y="1089.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DFW-mB-7SF">
@@ -1304,6 +1295,52 @@
             </objects>
             <point key="canvasLocation" x="-744" y="1157"/>
         </scene>
+        <!--Recording View Controller-->
+        <scene sceneID="jqK-gJ-ku2">
+            <objects>
+                <viewController id="MxZ-48-LUs" customClass="RecordingViewController" customModule="mNm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Lt-5y-mHp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" image="mentor-mentee-on-stairs" id="oaL-xn-rw1">
+                                <rect key="frame" x="37" y="240" width="300" height="198"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Video" textAlignment="natural" id="fe8-9N-L4P">
+                                <rect key="frame" x="144" y="27" width="86" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.43137254899999999" green="0.4431372549" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OWa-cK-Z44">
+                                <rect key="frame" x="88" y="586" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.70196078429999997" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordTapped:" destination="MxZ-48-LUs" eventType="touchUpInside" id="MfB-eP-TFS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="677"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJq-rk-LPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212.5" y="1095.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Mentee-Home_Screen- With  Mentors" width="375" height="667"/>
@@ -1313,7 +1350,7 @@
         <image name="mentor-mentee-on-stairs" width="300" height="198"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BxB-JK-Oon"/>
+        <segue reference="n5K-yx-uvk"/>
         <segue reference="Hza-OO-NhZ"/>
     </inferredMetricsTieBreakers>
 </document>
