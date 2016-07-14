@@ -11,6 +11,9 @@ import MobileCoreServices
 import MessageUI
 class RecordingViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var finishButton: UIButton!
+    
     func startCameraFromViewController(viewController: UIViewController, withDelegate delegate: protocol<UIImagePickerControllerDelegate, UINavigationControllerDelegate>) -> Bool {
         if UIImagePickerController.isSourceTypeAvailable(.Camera) == false {
             return false
@@ -39,7 +42,8 @@ class RecordingViewController: UIViewController, MFMailComposeViewControllerDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     startButton.backgroundColor = UIColor.grayColor()
+     finishButton.backgroundColor = UIColor.grayColor()
         // Do any additional setup after loading the view.
     }
 
@@ -82,6 +86,25 @@ class RecordingViewController: UIViewController, MFMailComposeViewControllerDele
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func onSendTap(sender: AnyObject) {
+        if startButton.backgroundColor == UIColor.grayColor() {
+            startButton.backgroundColor = UIColor.greenColor()
+        }
+        else if startButton.backgroundColor == UIColor.greenColor() {
+            startButton.backgroundColor = UIColor.grayColor()
+        }
+        
+    }
+    
+    @IBAction func onFinishTap(sender: AnyObject) {
+        if finishButton.backgroundColor == UIColor.grayColor() {
+            finishButton.backgroundColor = UIColor.greenColor()
+        }
+        else if finishButton.backgroundColor == UIColor.greenColor() {
+            finishButton.backgroundColor = UIColor.grayColor()
+        }
+    }
+    
 }
 extension RecordingViewController: UIImagePickerControllerDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
