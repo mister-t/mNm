@@ -8,7 +8,9 @@
 
 import UIKit
 import MobileCoreServices
-class RecordingViewController: UIViewController {
+import MessageUI
+class RecordingViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    
     func startCameraFromViewController(viewController: UIViewController, withDelegate delegate: protocol<UIImagePickerControllerDelegate, UINavigationControllerDelegate>) -> Bool {
         if UIImagePickerController.isSourceTypeAvailable(.Camera) == false {
             return false
@@ -24,8 +26,8 @@ class RecordingViewController: UIViewController {
         return true
     }
     func video(videoPath: NSString, didFinishSavingWithError error: NSError?, contextInfo info: AnyObject) {
-        var title = "Success"
-        var message = "Video was saved"
+        var title = "Sent"
+        var message = "Your message was sent to Mark Webber"
         if let _ = error {
             title = "Error"
             message = "Video failed to save"
@@ -50,7 +52,35 @@ class RecordingViewController: UIViewController {
     @IBAction func recordTapped(sender: AnyObject) {
         startCameraFromViewController(self, withDelegate: self)
     }
+    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
     
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+        
+        mailComposerVC.setToRecipients(["mentor@gmail.com"])
+        mailComposerVC.setSubject("Task:Read Supply Chain Book")
+        mailComposerVC.setMessageBody("", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
 extension RecordingViewController: UIImagePickerControllerDelegate {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4FD25DE71D33333900607563 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD25DE61D33333900607563 /* CameraViewController.swift */; };
 		4FD25DEF1D334AF000607563 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD25DEE1D334AF000607563 /* RecordingViewController.swift */; };
+		4FD25DF11D373D9D00607563 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD25DF01D373D9D00607563 /* MessageUI.framework */; };
 		D6068ECC1D25A996006594D0 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6068ECB1D25A996006594D0 /* SearchResultCell.swift */; };
 		D648CE0E1D25FD3000C0A20D /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = D648CE0D1D25FD3000C0A20D /* mentors.json */; };
 		D68194861D1CB0CD0074F49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68194851D1CB0CD0074F49A /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		4FD25DE61D33333900607563 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ../CameraViewController.swift; sourceTree = "<group>"; };
 		4FD25DEE1D334AF000607563 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingViewController.swift; path = ../RecordingViewController.swift; sourceTree = "<group>"; };
+		4FD25DF01D373D9D00607563 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D6068ECB1D25A996006594D0 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		D648CE0D1D25FD3000C0A20D /* mentors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
 		D68194821D1CB0CD0074F49A /* mNm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mNm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD25DF11D373D9D00607563 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +125,7 @@
 		D68194791D1CB0CD0074F49A = {
 			isa = PBXGroup;
 			children = (
+				4FD25DF01D373D9D00607563 /* MessageUI.framework */,
 				D648CE0C1D25FD1D00C0A20D /* Resources */,
 				D68194841D1CB0CD0074F49A /* mNm */,
 				D68194991D1CB0CD0074F49A /* mNmTests */,
@@ -264,6 +268,7 @@
 				TargetAttributes = {
 					D68194811D1CB0CD0074F49A = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = A667957W79;
 					};
 					D68194951D1CB0CD0074F49A = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -486,10 +491,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mNm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeung.mNm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -497,10 +506,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mNm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeung.mNm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
