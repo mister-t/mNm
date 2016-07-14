@@ -88,9 +88,9 @@ class RecordingViewController: UIViewController, MFMailComposeViewControllerDele
 
     @IBAction func onSendTap(sender: AnyObject) {
         if startButton.backgroundColor == UIColor.grayColor() {
-            startButton.backgroundColor = UIColor.greenColor()
+            startButton.backgroundColor = UIColor(red: 48/255, green: 167/255, blue: 130/255, alpha: 1)
         }
-        else if startButton.backgroundColor == UIColor.greenColor() {
+        else if startButton.backgroundColor == UIColor(red: 48/255, green: 167/255, blue: 130/255, alpha: 1) {
             startButton.backgroundColor = UIColor.grayColor()
         }
         
@@ -98,9 +98,9 @@ class RecordingViewController: UIViewController, MFMailComposeViewControllerDele
     
     @IBAction func onFinishTap(sender: AnyObject) {
         if finishButton.backgroundColor == UIColor.grayColor() {
-            finishButton.backgroundColor = UIColor.greenColor()
+            finishButton.backgroundColor = UIColor(red: 48/255, green: 167/255, blue: 130/255, alpha: 1)
         }
-        else if finishButton.backgroundColor == UIColor.greenColor() {
+        else if finishButton.backgroundColor == UIColor(red: 48/255, green: 167/255, blue: 130/255, alpha: 1) {
             finishButton.backgroundColor = UIColor.grayColor()
         }
     }
